@@ -5,17 +5,17 @@ name = "doppler"
 type = "cli"
 
 [platform.linux]
-bin-path = "bin/doppler"
+bin-path = "doppler"
 archive-prefix = "doppler_{version}_linux_{arch}"
 download-file = "doppler_{version}_linux_{arch}.tar.gz"
 
 [platform.macos]
-bin-path = "bin/doppler"
+bin-path = "doppler"
 archive-prefix = "doppler_{version}_macOS_{arch}"
 download-file = "doppler_{version}_macOS_{arch}.tar.gz"
 
 [platform.windows]
-bin-path = "bin/doppler.exe"
+bin-path = "doppler.exe"
 archive-prefix = "doppler_{version}_windows_{arch}"
 download-file = "doppler_{version}_windows_{arch}.zip"
 
