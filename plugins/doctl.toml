@@ -1,0 +1,32 @@
+# A TOML plugin for proto:
+# https://moonrepo.dev/docs/proto/plugins#toml-plugin
+
+name = "doctl"
+type = "cli"
+
+[platform.linux]
+bin-path = "doctl"
+archive-prefix = "doctl-{version}_linux_{arch}"
+download-file = "doctl-{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+bin-path = "doctl"
+archive-prefix = "doctl-{version}_macOS_{arch}"
+download-file = "doctl-{version}_macOS_{arch}.tar.gz"
+
+[platform.windows]
+bin-path = "doctl.exe"
+archive-prefix = "doctl-{version}_windows_{arch}"
+download-file = "doctl-{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/digitalocean/doctl/releases/download/v{version/{download_file}"
+unpack = true
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/digitalocean/doctl"
+git-tag-pattern = "^(?:v?)(.*)$"
