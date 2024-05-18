@@ -6,21 +6,21 @@ type = "cli"
 
 [platform.linux]
 bin-path = "doctl"
-archive-prefix = "doctl-{version}_linux_{arch}"
-download-file = "doctl-{version}_linux_{arch}.tar.gz"
+archive-prefix = "doctl-{version}-linux-{arch}"
+download-file = "doctl-{version}-linux-{arch}.tar.gz"
 
 [platform.macos]
 bin-path = "doctl"
-archive-prefix = "doctl-{version}_macOS_{arch}"
-download-file = "doctl-{version}_macOS_{arch}.tar.gz"
+archive-prefix = "doctl-{version}-darwin-{arch}"
+download-file = "doctl-{version}-darwin-{arch}.tar.gz"
 
 [platform.windows]
 bin-path = "doctl.exe"
-archive-prefix = "doctl-{version}_windows_{arch}"
-download-file = "doctl-{version}_windows_{arch}.zip"
+archive-prefix = "doctl-{version}-windows-{arch}"
+download-file = "doctl-{version}-windows-{arch}.zip"
 
 [install]
-download-url = "https://github.com/digitalocean/doctl/releases/download/{version}/{download_file}"
+download-url = "https://github.com/digitalocean/doctl/releases/download/v{version}/{download_file}"
 unpack = true
 
 [install.arch]
