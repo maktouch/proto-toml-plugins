@@ -20,7 +20,7 @@ archive-prefix = "doctl-{version}_windows_{arch}"
 download-file = "doctl-{version}_windows_{arch}.zip"
 
 [install]
-download-url = "https://github.com/digitalocean/doctl/releases/download/v{version/{download_file}"
+download-url = "https://github.com/digitalocean/doctl/releases/download/{version}/{download_file}"
 unpack = true
 
 [install.arch]
