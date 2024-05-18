@@ -1,0 +1,32 @@
+# A TOML plugin for proto:
+# https://moonrepo.dev/docs/proto/plugins#toml-plugin
+
+name = "doppler"
+type = "cli"
+
+[platform.linux]
+bin-path = "bin/doppler"
+archive-prefix = "doppler_{version}_linux_{arch}"
+download-file = "doppler_{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+bin-path = "bin/doppler"
+archive-prefix = "doppler_{version}_macOS_{arch}"
+download-file = "doppler_{version}_macOS_{arch}.zip"
+
+[platform.windows]
+bin-path = "bin/doppler.exe"
+archive-prefix = "doppler_{version}_windows_{arch}"
+download-file = "doppler_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/DopplerHQ/cli/releases/download/{version}/{download_file}"
+unpack = true
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/DopplerHQ/cli"
+git-tag-pattern = "^(?:v?)(.*)$"
