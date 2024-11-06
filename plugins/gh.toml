@@ -6,16 +6,19 @@ type = "cli"
 
 [platform.linux]
 bin-path = "bin/gh"
+exe-path = "bin/gh"
 archive-prefix = "gh_{version}_linux_{arch}"
 download-file = "gh_{version}_linux_{arch}.tar.gz"
 
 [platform.macos]
 bin-path = "bin/gh"
+exe-path = "bin/gh"
 archive-prefix = "gh_{version}_macOS_{arch}"
 download-file = "gh_{version}_macOS_{arch}.zip"
 
 [platform.windows]
 bin-path = "bin/gh.exe"
+exe-path = "bin/gh.exe"
 archive-prefix = "gh_{version}_windows_{arch}"
 download-file = "gh_{version}_windows_{arch}.zip"
 
