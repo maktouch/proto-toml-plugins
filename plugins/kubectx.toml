@@ -1,0 +1,27 @@
+# A TOML plugin for proto:
+# https://moonrepo.dev/docs/proto/plugins#toml-plugin
+
+name = "kubectx"
+type = "cli"
+
+[platform.linux]
+bin-path = "kubectx"
+archive-prefix = "kubectx_v{version}_linux_{arch}"
+download-file = "kubectx_v{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+bin-path = "kubectx"
+archive-prefix = "kubectx_v{version}_darwin_{arch}"
+download-file = "kubectx_v{version}_darwin_{arch}.tar.gz"
+
+[install]
+download-url = "https://github.com/ahmetb/kubectx/releases/download/v{version}/{download_file}"
+unpack = true
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[resolve]
+git-url = "https://github.com/ahmetb/kubectx"
+git-tag-pattern = "^(?:v)(.*)$"
