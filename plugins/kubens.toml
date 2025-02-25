@@ -14,6 +14,12 @@ bin-path = "kubens"
 archive-prefix = "kubens_v{version}_darwin_{arch}"
 download-file = "kubens_v{version}_darwin_{arch}.tar.gz"
 
+[platform.windows]
+bin-path = "kubens.exe"
+exe-path = "kubens.exe"
+archive-prefix = "kubens_{version}_windows_{arch}"
+download-file = "kubens_{version}_windows_{arch}.zip"
+
 [install]
 download-url = "https://github.com/ahmetb/kubectx/releases/download/v{version}/{download_file}"
 unpack = true
@@ -24,4 +30,3 @@ x86_64 = "x86_64"
 
 [resolve]
 git-url = "https://github.com/ahmetb/kubectx"
-git-tag-pattern = "^(?:v)(.*)$"
