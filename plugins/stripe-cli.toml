@@ -1,0 +1,32 @@
+# A TOML plugin for proto:
+# https://moonrepo.dev/docs/proto/plugins#toml-plugin
+
+name = "stripe"
+type = "cli"
+
+[platform.linux]
+bin-path = "stripe"
+archive-prefix = "stripe_{version}_linux_{arch}"
+download-file = "stripe_{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+bin-path = "stripe"
+archive-prefix = "stripe_{version}_mac-os_{arch}"
+download-file = "stripe_{version}_mac-os_{arch}.tar.gz"
+
+[platform.windows]
+bin-path = "stripe.exe"
+archive-prefix = "stripe_{version}_windows_{arch}"
+download-file = "stripe_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/stripe/stripe-cli/releases/download/v{version}/{download_file}"
+unpack = true
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/stripe/stripe-cli"
+git-tag-pattern = "^(?:v?)(.*)$"
