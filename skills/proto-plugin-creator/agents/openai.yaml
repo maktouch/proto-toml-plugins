@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proto Plugin Creator"
+  short_description: "Create and validate proto non-WASM plugins"
+  default_prompt: "Use $proto-plugin-creator to create a non-WASM proto plugin file and validation checklist for a new CLI tool."
